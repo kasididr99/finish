@@ -1,0 +1,62 @@
+*{  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;
+}
+body {
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("img/พื้นหลัง.jpg");
+  background-size: cover;
+  background-position: center;
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;       /* กลางแนวนอน */
+  text-align:center;
+  min-height: 100vh;
+}
+
+/* หัวข้อ */
+h2{
+    font-size:50px;
+    color:white;
+    margin-bottom:70px;
+    margin-top: 140px;
+}
+
+/* ช่องเลือกเดือน */
+select{
+    padding:12px 18px;
+    border-radius:14px;
+    border:3px solid #333;
+    font-size:18px;
+    width:240px;
+    margin-bottom:30px;
+}
+
+/* ข้อความเดือนนี้มี */
+.countText{
+    color:white;
+    font-size:24px;
+    margin-bottom:40px;
+}
+
+/* ⭐ กรอบรายชื่อ */
+.namebox{
+    width:360px;
+    margin:15px auto;
+    padding:18px;
+
+    /* กล่องใสแบบกระจก */
+    background:rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+
+    /* ⭐ ตัวอักษรขาว */
+    color:white;
+    font-size:24px;
+}

@@ -1,0 +1,93 @@
+*{  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:  url("img/พื้นหลัง.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0%;
+   
+}
+
+
+/* กล่องล็อกอิน */
+.login-box{
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    width: 320px;
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+
+/* หัวข้อ */
+.login-box h3{
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+/* ช่องกรอก */
+.login-box input{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+
+    border-radius: 25px;
+    border: 1px solid #000000;
+
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+/* ตอนกดช่อง */
+.login-box input:focus{
+    border-color: #4a329f;
+    outline: none;
+    box-shadow: 0 0 5px rgba(46, 28, 118, 0.5);
+}
+
+
+/* ปุ่ม */
+.login-box button{
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: #504d8c;
+    color: white;
+    font-size: 16px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* เอฟเฟกต์ตอนชี้เมาส์ */
+.login-box button:hover{
+    background: #171768;
+}
+
+
+/* ข้อความ error */
+#error{
+    margin-top: 10px;
+    font-size: 14px;
+}

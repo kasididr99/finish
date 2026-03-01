@@ -1,0 +1,133 @@
+/* *{  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;
+}
+
+ body {
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("img/พื้นหลัง.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer{
+    margin-top: auto;
+}
+
+nav{
+    margin-top: 20px;
+    margin-left: 80px;
+    gap: 20px;
+}
+div.pettitle{
+    display: flex;
+    margin-top: 10vw;
+    margin-bottom: 5vw;
+    justify-content: center; 
+    color: rgb(236, 243, 237);
+    font-size: 30px;
+}   
+div.card{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 30px;
+}
+div.pet img{
+    display: flex;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+div.name{   
+    font-size: 28px;
+    color: aliceblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.name{
+  margin-top: 8px;
+  padding: 8px 14px;
+  background: #555;
+  color: white;
+  border-radius: 10px;
+  display: inline-block; 
+  font-size: 16px;
+}
+ */
+
+
+
+ *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url("img/พื้นหลัง.jpg") center/cover no-repeat;
+    min-height:100svh;
+    font-family: Arial, sans-serif;
+    color:white;
+}
+
+/* ===== TITLE ===== */
+.pettitle{
+    text-align:center;
+    margin:clamp(30px, 8vw, 80px) 0;
+}
+
+.pettitle h1{
+    font-size:clamp(28px, 6vw, 48px);
+}
+
+/* ===== CARD CONTAINER ===== */
+nav{
+    width:100%;
+    max-width:1100px;
+    margin:auto;
+    padding:0 20px 40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:30px;
+}
+
+/* ===== CARD ===== */
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(5px);
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* ===== IMAGE ===== */
+.pet img{
+    width:clamp(90px, 18vw, 160px);
+    height:clamp(90px, 18vw, 160px);
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* ===== NAME ===== */
+.name{
+    margin-top:15px;
+    font-size:clamp(16px, 4vw, 22px);
+    background:#444;
+    padding:8px 16px;
+    border-radius:12px;
+    display:inline-block;
+}

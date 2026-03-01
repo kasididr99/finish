@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าหลัก</title>
+
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+
+<div class="login-box" id="loginBox">
+  <h3>เข้าสู่ระบบ</h3>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <br>
+  <button onclick="login()">Login</button>
+  <p id="error" style="color:red;"></p>
+</div>
+
+<script>
+function login() {
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+
+    // ตั้งยูสกับพาสไว้ก่อน (ตัวอย่าง)
+    if (user === "Family" && pass === "418") {
+      window.location.href="login.html";
+      // document.getElementById("home").style.display = "block";
+    } else {
+      document.getElementById("error").innerText = "ยูสเซอร์หรือรหัสผ่านผิด";
+    }
+}
+</script>
+</body>
+</html>

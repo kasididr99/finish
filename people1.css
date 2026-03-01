@@ -1,0 +1,203 @@
+/* *{  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;
+} */
+
+/* body {
+    background: 
+        url("img/พื้นหลัง18.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width:150%;
+} */
+
+/* my family */
+/* div.logo{
+    display: flex;
+    margin: auto;
+    justify-content: center; 
+    margin-top: 80px; 
+    color: rgb(115, 215, 140);
+    font-size: 70px;
+} */
+/* จบ my family */
+
+/* รูป */
+/* .person img{
+  width:80px;
+  height:80px;
+  border-radius:38%;
+  object-fit:cover;
+  cursor:pointer;
+} */
+
+/* กล่องแต่ละรูป */
+/* .person{
+  text-align:center;
+} */
+
+/* ข้อมูลใต้รูป */
+/* .info{
+  display:none;
+  margin-top:10px;
+  background:rgb(123, 120, 120);
+  padding:8px;
+  border-radius:10px;
+  font-size: 18px;
+
+  width:180px;        
+  line-height:1.4; 
+
+} */
+
+
+/*   เริ่มจัดแถว   */
+/* .Row1{
+    display: flex;
+    gap: 200px;
+    margin-top: 150px;
+    margin-bottom: 180px;
+    justify-content: center;
+}
+.left{
+    display: flex;
+    gap: 80px;
+}
+.right{
+    display: flex;
+    gap: 80px;
+}
+
+
+.Row2{
+    display: flex;
+    gap: 150px;
+    margin-bottom: 180px;
+    justify-content: center;
+}
+.money{
+    display: flex;
+    gap: 80px;
+}
+.sonfather{
+    display: flex;
+    gap: 80px;
+}
+.sonphon{
+    display: flex;
+    gap: 80px;
+}
+
+
+.Row3{
+    display: flex;
+    gap: 100px;
+    margin-bottom: 180px;
+    justify-content: center;
+}
+.sonmoney{
+    display: flex;
+    gap: 80px;
+}
+.sonjeb{
+    display: flex;
+    gap: 80px;
+}
+.sonning{
+    display: flex;
+    gap: 80px;
+}
+.sonview{
+    display: flex;
+    gap: 80px;
+} */
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:url("img/พื้นหลัง18.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  min-height:100vh;
+  font-family:Arial, sans-serif;
+  overflow-x:auto;     /* ⭐ เลื่อนทั้งหน้า */
+}
+
+/* ครอบต้นไม้ทั้งหมด */
+.background{
+  min-width:1400px;    /* ⭐ กำหนดความกว้างต้นไม้ */
+  padding-bottom:100px;
+}
+
+/* โลโก้ */
+.logo{
+  text-align:center;
+  margin-top:60px;
+  font-size:50px;
+  color:rgb(115,215,140);
+}
+
+/* ===== โครงสร้างต้นไม้ ===== */
+
+.Row1,
+.Row2,
+.Row3{
+  display:flex;
+  justify-content:center;
+  gap:100px;
+  margin:140px 0;
+}
+
+/* กลุ่มย่อย */
+.left,
+.right,
+.money,
+.sonfather,
+.sonphon,
+.sonmoney,
+.sonjeb,
+.sonning,
+.sonview{
+  display:flex;
+  gap:30px;
+}
+
+/* คน */
+.person{
+  text-align:center;
+  min-width:120px;
+}
+
+.person img{
+  width:90px;
+  height:90px;
+  border-radius:40%;
+  object-fit:cover;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.person img:hover{
+  transform:scale(1.1);
+}
+
+/* กล่องข้อมูล */
+.info{
+  display:none;
+  margin-top:10px;
+  background:rgb(123,120,120);
+  padding:8px;
+  border-radius:10px;
+  font-size:14px;
+  width:180px;
+  color:white;
+}

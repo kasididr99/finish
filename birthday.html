@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday</title>
+
+    <link rel="stylesheet" href="birthday.css">
+
+</head>
+    
+<body>
+
+    <div class="container">
+
+        <h2>happy birthday</h2>
+
+        <select id="monthInput">
+            <option value="">-- เลือกเดือน --</option>
+            <option>มกราคม</option>
+            <option>กุมภาพันธ์</option>
+            <option>มีนาคม</option>
+            <option>เมษายน</option>
+            <option>พฤษภาคม</option>
+            <option>มิถุนายน</option>
+            <option>กรกฎาคม</option>
+            <option>สิงหาคม</option>
+            <option>กันยายน</option>
+            <option>ตุลาคม</option>
+            <option>พฤศจิกายน</option>
+            <option>ธันวาคม</option>
+        </select>
+
+        <ul id="people" style="display:none">
+        <li data-day="-" data-month="-">ตาพน</li>
+        <li data-day="3" data-month="มกราคม">ยายพร</li>
+        <li data-day="-" data-month="-">ปู่</li>
+        <li data-day="4" data-month="ตุลาคม">ย่า</li>
+        <li data-day="20" data-month="กันยายน">พ่อเเก็ป</li>
+        <li data-day="-" data-month="-">อาก่อ</li>
+        <li data-day="20" data-month="ธันวาคม">แม่หนิง</li>
+        <li data-day="2" data-month="กรกฎาคม">น้าจิ๊บ</li>
+        <li data-day="30" data-month="สิงหาคม">ตัง</li>
+        <li data-day="22" data-month="มกราคม">น้าภีม</li>
+        <li data-day="-" data-month="-">แฝด1</li>
+        <li data-day="-" data-month="-">แฝด2</li>
+        <li data-day="6" data-month="กุมภาพันธ์">พี่นัด</li>
+        <li data-day="27" data-month="กันยายน">พี่แนน</li>
+        <li data-day="2" data-month="มิถุนายน">เปรม</li>
+        <li data-day="28" data-month="มิถุนายน">ปุณ</li>
+        <li data-day="4" data-month="พฤษภาคม">ปัณ</li>
+        <li data-day="10" data-month="ธันวาคม">วิว</li>
+        </ul>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script>
+            const input = document.getElementById("monthInput");
+            const people = document.querySelectorAll("#people li");
+            const result = document.getElementById("result");
+
+            function showPeople(month){
+
+        result.innerHTML="";
+        if(month==="") return;
+
+        let count=0;
+
+        people.forEach(p=>{
+            if(p.dataset.month===month){
+            const box=document.createElement("div");
+            box.className="namebox";
+            const day = p.dataset.day;
+            box.textContent = "🎂 " + p.textContent + " (" + day + " " + month + ")";
+            result.appendChild(box);
+            
+            count++;
+            }
+        });
+
+        if(count===0){
+            result.innerHTML="<div class='namebox'>ไม่มีคนเกิดเดือนนี้</div>";
+        }else{
+            const title=document.createElement("div");
+            title.className="countText";
+            title.textContent="เดือนนี้มี "+count+" คน";
+            title.style.color = "white";
+            result.prepend(title);
+
+        }
+        }
+
+        input.addEventListener("change",()=>{
+        showPeople(input.value);
+        });
+    </script>
+
+</body>
+</html>
